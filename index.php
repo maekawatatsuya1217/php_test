@@ -1,54 +1,44 @@
 <?php
 
-// 1行のみの配列の場合
+  $height = 180;
 
-//   配列の中から特定の要素を出力
-  $array_1 = ["北海道", "東京都", "大阪府"];
-  echo $array_1[0];
+  if ($height == 180){
+      echo '身長は.{$height}.cmです！';
+  }
 
-//   配列の中身を全て出力
-  var_dump($array_1);
+  $color = 'blue';
 
-//   複数行の配列の場合
+  if ($color == red){
+      echo '信号は赤です。';
+  } elseif ($color == yellow){
+      echo '信号は黄色です。';
+  } else {
+      echo '信号は赤色です。';
+  }
 
-//   配列の中から特定の要素を出力
+//   emptyを使用したif文
 
-  $array_2 = [
-    ["青","黄","赤"],
-    ["紫","緑","白"]
-  ];
-  echo $array_2[0][2];
+  $num = '';
 
-  //   配列の中から特定の要素を出力
-  var_dump($array_2);
+  if (empty($num)){
+      echo '変数は空です';
+  } else{
+      echo '変数は空ではありません';
+  }
 
-//   連想配列
+  if (!empty($num)){
+    echo '変数は空ではありません！';
+  }
 
-    $array_3 = [
-    'name' => '前川',
-    'height' => 170,
-    'hobby' => 'バドミントン'
-    ];
+  $color1 = 'yellow';
+  $color2 = 'red';
 
-    echo $array_3['name'];
-
-    var_dump($array_3);
-
-    // 複雑な連想配列
-
-    $player = [
-        '本田選手' => [
-            'height' => 180,
-            'hobby' => 'サッカー'
-        ],
-        '香川選手' => [
-            'height' => 170,
-            'hobby' => 'サッカー'
-        ],
-    ];
-
-    echo $player['本田選手']['height'];
-
-    var_dump($player);
+  if ($color1 === 'blue' && $color2 === 'red'){
+      echo '変数の中身が２つとも一致しています！';
+  } elseif ($color1 === 'blue' || $color2 === 'red'){
+      echo '変数の中身が1つだけ一致しています！';
+  } else {
+      echo '変数の中身は全く一致していません！';
+  }
 
 ?>
