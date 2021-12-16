@@ -1,19 +1,17 @@
 <?php
+  $in_data =5;
 
-  for($i == 0; $i <= 10; $i ++){
-    if($i === 5) {
+  switch($in_data){
+      case 1:
+        echo '変数は1です';
         break;
-    }
-    echo $i;
+      case 2:
+        echo '変数は2です';
+        break;
+      case 3:
+        echo '変数は3です';
+        break;
+      default:
+        echo '変数は1から3の数字ではありません！';
   }
-
-  echo '<br>';
-
-  $j = 0;
-
-  while($j < 5){
-      echo $j;
-      $j ++;
-  }
-
 ?>
