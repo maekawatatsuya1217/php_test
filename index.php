@@ -1,13 +1,19 @@
 <?php
 
-  $members = [
-    'name' => '本田',
-    'height' => 170,
-    'age' => 28 
-  ];
+  for($i == 0; $i <= 10; $i ++){
+    if($i === 5) {
+        break;
+    }
+    echo $i;
+  }
 
-  foreach ($members as $key => $value){
-      echo '{$key}は{$value}です！';
+  echo '<br>';
+
+  $j = 0;
+
+  while($j < 5){
+      echo $j;
+      $j ++;
   }
 
 ?>
