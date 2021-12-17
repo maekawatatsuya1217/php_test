@@ -1,16 +1,12 @@
 <?php
 
-  function name($name){
-      echo $name;
-  }
-  name('名前');
+  $name1 = 'tatsuya';
+  echo strlen($name1);
 
-  function sumPrice($int1, $int2){
-      $int3 = $int1 + $int2;
-      return $int3;
-  }
+  $name2 = 'たつや';
+  echo mb_strlen($name2);
 
-  $total = sumPrice(3,5);
+  $string = '私の名前は前川です';
+  echo str_replace('前川','まえかわ',$string);
 
-  echo $total;
 ?>
