@@ -24,4 +24,23 @@
     echo "<pre>";
     var_dump($result);
     echo "</pre>";
+
+    // まとまって処理 beginTransaction, commit, rollback
+
+    $pdo->beginTransaction();
+
+    try{
+
+        // sql処理
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue('id', 2, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $pdo->commit();
+
+    }catch(PDOExcection $e){
+
+        $pdo->rollback();
+
+    }
 ?>
